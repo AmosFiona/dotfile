@@ -1,0 +1,11 @@
+chromium/
+clash/
+dwm-bar/
+fcitx/
+fcitx5/
+ibus/
+procps/
+dwm/**/*.service
+dwm/fix-*
+nvim/plugged/
+go/

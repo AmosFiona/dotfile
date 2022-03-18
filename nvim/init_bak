@@ -1,0 +1,67 @@
+let mapleader = " "
+execute 'source ~/.config/nvim/pattern/base.vim'
+
+syntax on
+set number
+set relativenumber
+set autochdir
+
+
+map S :w<CR>
+map Q :q<CR>
+map T :source $MYVIMRC<CR>
+
+map sl :set splitright<CR>:vsplit<CR>
+map sh :set nosplitright<CR>:vsplit<CR>
+map sj :set splitbelow<CR>:split<CR>
+map sk :set nosplitbelow<CR>:split<CR>
+map <LEADER>l <C-w>l
+map <LEADER>h <C-w>h
+map <LEADER>j <C-w>j
+map <LEADER>k <C-w>k
+
+
+
+
+
+
+
+call plug#begin('~/.config/nvim/plugged')
+
+Plug 'theniceboy/nvim-deus'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+"theme
+Plug 'connorholyday/vim-snazzy'
+
+"background transparent
+Plug 'xiyaowong/nvim-transparent'
+
+"floating_window and in ranger
+Plug 'kevinhwang91/rnvimr'
+
+
+
+"Latex
+Plug 'lervag/vimtex'
+
+
+"Iput-method
+
+
+
+call plug#end()
+
+let g:SnazzyTransparent = 1
+color snazzy
+
+
+"leatex
+let g:tex_flavor = 'latex'
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_quickfix_mode = 1
+let g:Tex_ComplieRule_pdf = 'xelatex -synctex=1 --interaction=nonstopmode $*'
+let g:vimtex_compiler_latexmk_engins = { '_':'-xelatex'}
+let g:vimtex_compiler_latexrun_engins = { '_':'-xelatex'}
+
