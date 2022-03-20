@@ -1,5 +1,5 @@
-execute 'source ~/.config/nvim/module/base.vim'
-execute 'source ~/.config/nvim/module/plugs.vim'
-execute 'source ~/.config/nvim/module/markdown.vim'
-execute 'source ~/.config/nvim/module/hotkey.vim'
-execute 'source ~/.config/nvim/module/latex.vim'
+source ~/.config/nvim/module/base.vim
+source ~/.config/nvim/module/plug.vim
+source ~/.config/nvim/module/markdown.vim
+source ~/.config/nvim/module/hotkey.vim
+source ~/.config/nvim/module/latex.vim

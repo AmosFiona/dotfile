@@ -9,3 +9,5 @@ dwm/**/*.service
 dwm/fix-*
 nvim/plugged/
 go/
+coc/
+yarn/

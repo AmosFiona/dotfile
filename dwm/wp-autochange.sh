@@ -1,6 +1,6 @@
-#! /bin/bash
+#! /bin/sh
 
 while true; do
-	/bin/bash ~/.config/dwm/wp-change.sh
-	sleep 30
+	/bin/sh ~/.config/dwm/wp-change.sh
+	sleep 1m
 done

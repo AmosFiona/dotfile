@@ -1,13 +1,15 @@
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
-		silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-						\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-			autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-		endif
+	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+					\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 " ============================================================================================
 " === Install Plugins with Vim-Plug
 " ============================================================================================
 call plug#begin('~/.config/nvim/plugged')
+"如果要某个插件只对某种文件生效:在plug后面加上'vim-plug',{'for':['文件格式','vim-plug']}
+
 " theme
 Plug 'theniceboy/nvim-deus'
 Plug 'vim-airline/vim-airline'
@@ -45,7 +47,18 @@ Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'm
 Plug 'ferrine/md-img-paste.vim' " <leader-p>
 Plug 'dkarter/bullets.vim'
 
-" Latex
+
+" 补括号
+Plug 'jiangmiao/auto-pairs'
+
+" Git
+Plug 'airblade/vim-gitgutter'
+Plug 'kdheepak/lazygit.nvim'
+
+"COC.nvim
+Plug 'neoclide/coc.nvim',{'branch':'release'}
+
+" vimtex or :CocInstall coc-vimtex for Latex
 Plug 'lervag/vimtex'
 Plug 'KeitaNakamura/tex-conceal.vim'
 "Plug 'wjakob/wjakob.vim' "已经复制tex.vim
@@ -56,9 +69,13 @@ call plug#end()
 
 
 "==================== Start of Plugin Settings =====================
-execute 'source ~/.config/nvim/module/plug-configs/fzf.vim'
-execute 'source ~/.config/nvim/module/plug-configs/rnvimr.vim'
-execute 'source ~/.config/nvim/module/plug-configs/rainbow.vim'
+source $HOME/.config/nvim/module/plug-configs/fzf.vim
+source $HOME/.config/nvim/module/plug-configs/rnvimr.vim
+source $HOME/.config/nvim/module/plug-configs/rainbow.vim
+source $HOME/.config/nvim/module/plug-configs/git.vim
+source $HOME/.config/nvim/module/plug-configs/marking.vim
+source $HOME/.config/nvim/module/plug-configs/coc-extensions.vim
+
 
 "Plug 'wincent/terminus'
 "Plug 'mg979/vim-xtabline'
@@ -73,19 +90,12 @@ execute 'source ~/.config/nvim/module/plug-configs/rainbow.vim'
 "Plug 'RRethy/vim-illuminate'
 "Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
-" Git
-"Plug 'airblade/vim-gitgutter'
-"Plug 'qianzai/vgit.nvim'
-"Plug 'kdheepak/lazygit.nvim'
-"Plug 'nvim-lua/plenary.nvim'
 
 " far 查找与替换
 "Plug 'brooth/far.vim'
 
 "Plug 'kevinhwang91/nvim-hlslens'
 
-" coc.vim
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " 默认面板
 "Plug 'glepnir/dashboard-nvim'
@@ -95,9 +105,6 @@ execute 'source ~/.config/nvim/module/plug-configs/rainbow.vim'
 
 " 对齐
 "Plug 'godlygeek/tabular'    "tabu
-
-" 补括号
-"Plug 'jiangmiao/auto-pairs'
 
 " 递进式补选中代码块
 "Plug 'gcmt/wildfire.vim'

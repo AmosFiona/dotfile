@@ -1,7 +1,9 @@
 lastupdatecheck: 0
 recentrepos:
 - /home/fiona/.config
+- /home/fiona/Documents
 - /home/fiona/Software/dwm
+- /home/fiona/Software/st
 startuppopupversion: 5
 customcommandshistory: []
 hidecommandlog: false
