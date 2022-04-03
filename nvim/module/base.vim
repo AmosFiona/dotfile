@@ -15,8 +15,8 @@ set relativenumber
 set mouse=							"close cursor
 set listchars=tab:\|\ ,trail:▫		"setting space display as ▫
 
-set tabstop=4						"设置tab制表符4
-set shiftwidth=4    				"设定制表符宽,while autoindent
+set tabstop=2						"设置tab制表符4
+set shiftwidth=2    				"设定制表符宽,while autoindent
 
 set ignorecase						"搜索忽略大小写"
 set smartcase						"智能搜索"

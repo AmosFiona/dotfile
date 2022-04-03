@@ -59,8 +59,8 @@ Plug 'kdheepak/lazygit.nvim'
 Plug 'neoclide/coc.nvim',{'branch':'release'}
 
 " vimtex or :CocInstall coc-vimtex for Latex
-Plug 'lervag/vimtex'
-Plug 'KeitaNakamura/tex-conceal.vim'
+Plug 'lervag/vimtex', { 'for' : ['tex', 'cls', 'sty'] }
+Plug 'KeitaNakamura/tex-conceal.vim', { 'for' : ['tex', 'cls', 'sty'] }
 "Plug 'wjakob/wjakob.vim' "已经复制tex.vim
 
 call plug#end()
