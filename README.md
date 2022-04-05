@@ -16,15 +16,16 @@
 输入法：fcitx5-im fcitx5=chinese-addons fcitx5-pinyin-zhwiki fcitx5-pinyin-moegirl
 
     $nvim /etc/X11/xinit/xinitrc
-    export INPUT_METHOD=fcitx5
-    export GTK_IM_MODULE=fcitx5
-    export QT_IM_MODULE=fcitx5
-    export XMODIFIERS=\@im=fcitx5
-    export SDL_IM_MODULE=fcitx
+    	    export INPUT_METHOD=fcitx5
+    	    export GTK_IM_MODULE=fcitx5
+    	    export QT_IM_MODULE=fcitx5
+    	    export XMODIFIERS=\@im=fcitx5
+    	    export SDL_IM_MODULE=fcitx
 
 python3 环境：python python-pip
 
     cocvim环境工具：python3 -m pip install pynvim
+            	pip install pynvim --upgrade
 
 xorg 渲染器半透明效果：picom
 
@@ -36,17 +37,11 @@ xorg 渲染器半透明效果：picom
     ];
 
 
-    #窗口透明度调整，如终端
-    inactive-opacity = 0.75;
-    #渲染半透明效果，alacritty终端半透明效果调整
+    #窗口透明度调整(非活动窗口)
+    inactive-opacity = 0.9;
+    #渲染半透明效果，alacritty/st等终端半透明效果调整，alacritty终端还需要在自己的配置文件下修改透明选项
     frame-opacity = 0.9;
 
-
-
-<<<<<<< HEAD
-python-pip
-pip install pynvim --upgrade
-=======
 
     wintypes:
     {
@@ -87,12 +82,29 @@ tex 编译 PDF 预览器：zathura 需要同时安装的工具
 
 终端：alacritty
 
+    	$cp /usr/share/doc/alacritty/example/alacritty.yml ~/.config/alacritty/alacritty.yml
+    	window:   #调整透明度
+    	  opacity: 0.75
+    	font:
+    	  normal:
+    	    family: Source Code Pro
+    	  bold:
+    	    style: Bold
+    	  italic:
+    	    style: Italic
+    	  bold_italic:
+    	    family: Source Code Pro
+    	  # Point size  #修改字体
+    	  size: 11.0
+
 Coc 自动补全依赖：nodejs yarn npm
 
-yay -S texlive-full clangd
-
-    texlive 更新： tlmgr update --all
+    	yay -S texlive-full clangd
 
 finally running in terminal:
-yarn global add neovim
->>>>>>> 5a0024f (nvim for tex)
+
+    	yarn global add neovim
+
+texlive 更新： tlmgr update --all
+
+视频播放器 mpv/vlc,目前在用 mpv,是苹果下的 IINA 开源播放器
