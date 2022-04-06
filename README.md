@@ -66,6 +66,9 @@ ranger 预览需要的工具：
 
     ffmpegthumbnailer
 
+    显示图标还需要自己克隆仓库
+    $git clone https://github.com/alexanderjeurissen/ranger_devicons  ~/.config/ranger/plugins/ranger_devicons
+
 终端下的 git 管理：lazygit
 
 tex 编译 PDF 预览器：zathura 需要同时安装的工具

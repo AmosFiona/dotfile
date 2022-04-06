@@ -1,0 +1,10 @@
+[Unit]
+Description=Convert 16-bit brightness values to 8-bit before systemd-backlight applies it
+Before=systemd-backlight@backlight:amdgpu_bl0.service
+
+[Service]
+Type=oneshot
+ExecStart=/home/fiona/.config/dwm/fix-brightness.sh
+
+[Install]
+WantedBy=multi-user.target
