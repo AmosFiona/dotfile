@@ -1,4 +1,24 @@
+# 开启自定义颜色
 set recolor true
+# 背景色
 set recolor-darkcolor \#dcdccc
+# 字体色
 set recolor-lightcolor \#1f1f1f
+
+# 粘贴板
 set selection-clipboard clipboard
+
+# 以宽度自适应打开
+set adjust-open "width"
+
+# 留空可隐藏底部的statusbar
+set guioptions ""
+
+# 只显示文件名，否则现实完整路径
+set window-title-basename true
+
+# 增强搜索，实时搜索
+set incremental-search true
+
+# 显示右侧进度条
+set show-v-scrallbar true
