@@ -75,7 +75,7 @@ source $HOME/.config/nvim/module/plug-configs/rainbow.vim
 source $HOME/.config/nvim/module/plug-configs/git.vim
 source $HOME/.config/nvim/module/plug-configs/marking.vim
 source $HOME/.config/nvim/module/plug-configs/coc-extensions.vim
-
+source $HOME/.config/nvim/module/plug-configs/ultisnips.vim
 
 "Plug 'wincent/terminus'
 "Plug 'mg979/vim-xtabline'
