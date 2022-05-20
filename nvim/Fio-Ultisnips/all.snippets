@@ -155,3 +155,47 @@ snippet tops "转换为\problemselection{text}" bi
 	}
 	$0
 endsnippet
+
+
+# 图片环境
+snippet fig "\begin{figure}...\end{figure}" bi
+\begin{figure}[!htbp]
+	${1:\centering}
+	\includegraphics[width = ${2:0.5}\textwidth]{./jpg/${3:photo_name}.jpg}
+	\caption{${4:Fig_name}}
+	\label{fig:${5:ref_id}}
+\end{figure}
+$0
+endsnippet
+
+# 子图图片
+snippet subfig "\begin{figure}\subfigure{\centering...\includegraphics[size]{picture}}\end{figure}" bi
+\subfigure
+	{
+		\centering
+		\includegraphics[width = ${1:0.45}\textwidth]{./jpg/${2:photo_name}.jpg}
+		\subfigure[SubfigureCaption]{\label{${3:subFig_name}}}
+	}
+$0
+endsnippet
+
+
+# 图表
+snippet table "\begin{table}\centering...\end{table}" bi
+\begin{table}[!htbp]
+	\vspace{-1.0 em}
+	\centering
+	\caption{${1:table_title}}
+	\label{tab:${2:ref_id}}
+		\begin{tabular}{${3:ll}}
+			\toprule
+			${4:title_A} & ${5:description_A} \\
+			\midrule
+			${6:text_A}  & ${7:parameter_A}   \\
+			\bottomrule
+		\multicolumn{${7:2}}{r}{\footnotesize{${8:text}}}\\
+	\end{tabular}
+	\vspace{-1.5 em}
+\end{table}
+$0
+endsnippet
