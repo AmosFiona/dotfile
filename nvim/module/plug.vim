@@ -34,7 +34,8 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets' " 代码片段示例库
 
 " 位置标记
-Plug 'chentau/marks.nvim'
+"Plug 'chentau/marks.nvim'  作者已更名仓库
+Plug 'chentoast/marks.nvim'
 
 " 函数列表
 Plug 'liuchengxu/vista.vim'

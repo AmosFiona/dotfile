@@ -7,8 +7,27 @@ let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_compiler_latexmk_engines = {'_':'-xelatex'}
 let g:vimtex_compiler_latexrun_engines = {'_':'-xelatex'}
-let g:Tex_CompilerRule_pdf = 'xelatex -synctex=1 --interaction=nonstopmode $*'
+"这里是设置latexmk工具的可选参数
+let g:vimtex_compiler_latexmk = {
+    \ 'build_dir' : '',
+    \ 'callback' : 1,
+    \ 'continuous' : 1,
+    \ 'executable' : 'latexmk',
+    \ 'hooks' : [],
+    \ 'options' : [
+    \   '-verbose',
+    \   '-file-line-error',
+    \   '-shell-escape',
+		\   '-8bit',
+    \   '-synctex=1',
+    \   '-interaction=nonstopmode',
+    \ ],
+    \}
+" -8bit  转换TAB在重编码16位时候代码中显示成^^I的问题
 let g:vimtex_quickfix_mode = 1
+"编译过程中忽略警告信息
+"let g:vimtex_quickfix_open_on_warning=0
+
 
 "KeitaNakamura/tex-conceal.vim
 set conceallevel=2
