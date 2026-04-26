@@ -2,7 +2,8 @@
 
 picom -b &
 
-/bin/sh $HOME/.config/dwm/wp-autochange.sh &
+#/bin/sh $HOME/.config/dwm/wp-autochange.sh &
+#/bin/sh $HOME/.config/dwm/wp-dwm.sh
 /bin/sh $HOME/.config/dwm/fcitx5.sh &
 
 

@@ -1,3 +1,7 @@
+syntax enable
+set termguicolors
+
+
 " markdown 快捷键
 "autocmd Filetype markdown map <leader>w yiWi[<esc>Ea](<esc>pa)
 autocmd Filetype markdown inoremap <buffer> <silent> ,, <++>
@@ -139,7 +143,7 @@ let g:mkdp_filetypes = ['markdown']
 
 
 " vim-table-mode
-" noremap <Leader>tm :TableModeToggle<CR>
+nnoremap <leader>tm :TableModeToggle<CR>
 
 " vim-markdown
 let g:vim_markdown_no_default_key_mappings = 1
@@ -148,3 +152,128 @@ let g:vim_markdown_conceal_code_blocks = 0
 let g:vim_markdown_folding_style_pythonic = 1
 let g:vim_markdown_override_foldtext = 0
 " noremap mt :Toc<CR>:vert res 40<CR>
+"
+"===============nvim-treesitter================
+lua << EOF
+require'nvim-treesitter.config'.setup ({
+	-- 自动安装缺失的语法解析器，.config 文件需要找一下是不是这个名字，不然会报错lua加载vim treesitter错误。
+	auto_install =true,
+	-- 启用的语法解析器（按需添加，比如 python、lua、c、cpp、javascript 等）
+	ensure_installed = {
+		'lua', 'vim', 'vimdoc', 'markdown', 'markdown_inline', --基礎必備
+		'c', 'cpp', 'python', 'javascript', 'typescript', --常用編程語言
+		'json','bash', 'html', 'css', 'latex'	-- 按需增减
+		},
+		sync_install = false, --異步安裝取消，提升速度
+	highlight ={
+	  enable = true,
+	  disable = {'latex','tex'},
+		-- 禁用大型文件的高亮（提升性能）
+	  disable = function(lang, buf)
+			local max_filesize = 300 * 1024 -- 300 KB
+			local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+			if ok and stats and stats.size > max_filesize then
+				return true
+			end
+		end,
+		-- 使用 treesitter 高亮而非 vim 内置高亮
+    additional_vim_regex_highlighting = false,
+	},
+	-- 启用代码折叠（需配合 set foldmethod=expr）
+  fold = {
+    enable = true,
+		fold_method = 'expr',
+    foldexpr = 'nvim_treesitter#foldexpr()',
+  },
+	-- 启用增量选择（按 v 扩展选择，V 收缩）
+  incremental_selection = {
+    enable = true,keymaps = {
+      init_selection = '<CR>',    -- 初始化选择
+      node_incremental = '<CR>',  -- 扩展选择
+      node_decremental = '<BS>',  -- 收缩选择
+      scope_incremental = '<TAB>',-- 扩展到作用域
+    },
+  },
+	-- 启用文本对象选择（比如 vi huakuohao 选中花括号内内容）
+  textobjects = {
+    enable = true,
+    select = {
+      enable = true,-- 文本对象映射（按需调整）
+      keymaps = {
+        ['af'] = '@function.outer',  -- 选中整个函数
+        ['if'] = '@function.inner',  -- 选中函数内部
+        ['ac'] = '@class.outer',     -- 选中整个类
+        ['ic'] = '@class.inner',     -- 选中类内部
+        ['aa'] = '@parameter.outer', -- 选中整个参数
+        ['ia'] = '@parameter.inner', -- 选中参数内部
+        ['al'] = '@loop.outer',      -- 选中整个循环
+        ['il'] = '@loop.inner',      -- 选中循环内部
+        ['ab'] = '@block.outer',      -- 选中整個代碼塊
+        ['ib'] = '@block.inner',      -- 选中代碼塊内部
+      },
+		},
+	},
+  --跳轉功能(跳轉到函數/類的上一個/下一個實例)
+	move = {
+		enable = true,
+		set_jumps = true, --記錄跳轉位置(可通過<C-o>返回)
+		goto_next_start = {
+        [']m'] = '@function.outer',      -- 选中整个循环
+        [']]'] = '@class.outer',      -- 选中循环内部
+			},
+		goto_next_start = {
+        ['[m'] = '@function.outer',      -- 选中整个循环
+        ['[['] = '@class.outer',      -- 选中循环内部
+			},
+	},
+
+	-- 启用语法注释（配合 comment.nvim 更佳）
+  context_commentstring = {
+    enable = true,
+		enable_autocmd = false,
+		},
+})
+-- 3. 全局设置（配合 treesitter 折叠）
+vim.opt.foldmethod = 'expr'  --使用表達式摺疊
+vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.opt.foldlevel = 99  -- 默认不折叠所有内容 避免打開文件全摺疊
+vim.opt.foldenable = true
+EOF
+
+
+"----------headlines.nvim 配置 ---
+lua << EOF
+-- 延迟加载 headlines.nvim，仅在打开 Markdown 文件时初始化
+vim.api.nvim_create_autocmd("FileType", {
+	  pattern = "markdown",
+		callback = function()
+		require("headlines").setup({
+			markdown = {
+				headline_highlights = {
+					"Headline1", "Headline2", "Headline3",
+					"Headline4", "Headline5", "Headline6",
+				},
+				codeblock_highlight = "CodeBlock",
+				dash_highlight = "Dash",
+				quote_highlight = "Quote",
+			  headline_styles= {
+					"█","▄","▀","▌","▐","▏"
+					},
+				},
+			})
+--自定义高亮（仅在Markdown缓冲区生效）
+vim.api.nvim_set_hl(0,"Headline1",{ fg = "#FF6B6B",bold =true })
+vim.api.nvim_set_hl(0,"Headline2",{ fg = "#4ECDC4",bold =true })
+vim.api.nvim_set_hl(0,"CodeBlock",{ bg = "#2A2A2A" })
+vim.api.nvim_set_hl(0,"Quote",{ fg = "#95E6CB",italic =true })
+end,
+})
+EOF
+
+
+
+
+
+nnoremap <F12> :MarkdownPreviewToggle<CR>
+nnoremap <leader>toc :Toc<CR>
+nnoremap <leader>cb i```<CR><CR>```<ESC>kA

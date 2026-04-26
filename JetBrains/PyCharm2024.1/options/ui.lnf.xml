@@ -1,0 +1,5 @@
+<application>
+  <component name="UISettings">
+    <option name="SHOW_PINNED_TABS_IN_A_SEPARATE_ROW" value="true" />
+  </component>
+</application>

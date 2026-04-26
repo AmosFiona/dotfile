@@ -1,0 +1,210 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="pythonProject" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="DatabaseView">
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf ideFingerprint="h1vh9aqd6okb" SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file>
+        <entry file="file://$PROJECT_DIR$/.venv/pyvenv.cfg">
+          <provider editor-type-id="text-editor" selected="true">
+            <state relative-caret-position="320">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTypeUsageLocalSummary"><![CDATA[{
+  "data": {
+    "PLAIN_TEXT": {
+      "usageCount": 3,
+      "lastUsed": 1714917145782
+    },
+    "textmate": {
+      "usageCount": 13,
+      "lastUsed": 1715117571781
+    },
+    "Ini": {
+      "usageCount": 1,
+      "lastUsed": 1772492812218
+    }
+  }
+}]]></component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>__zhvt_micro_offset_dim</find>
+      <find>\c_one_inch_dim</find>
+      <find>ulin</find>
+      <find>note</find>
+      <find>__zhvt_main_font_str</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="GitSEFilterConfiguration">{}</component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Readme.txt" />
+      <option value="$USER_HOME$/Chinese/zhvt-classic.cls" />
+      <option value="$USER_HOME$/Chinese/zijunbiehou.tex" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="LanguageUsageStatistics">
+    <language id="Ini">
+      <summary usageCount="1" lastUsage="1772492812220" />
+    </language>
+    <language id="TEXT">
+      <summary usageCount="3" lastUsage="1714917145784" />
+    </language>
+    <language id="textmate">
+      <summary usageCount="13" lastUsage="1715117571781" />
+    </language>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="pythonProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/fiona/PycharmProjects/pythonProject}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pythonProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/fiona/PycharmProjects/pythonProject}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/fiona/PycharmProjects/pythonProject/.venv}" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Open Files'; set:Open Files; class com.intellij.openapi.fileEditor.impl.OpenFilesScope">
+          <expand>
+            <path>
+              <item name="pythonProject" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/PycharmProjects/pythonProject" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="25999000" />
+  </component>
+  <component name="ToolWindowManager">
+    <layoutV2>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.19353147" />
+      <window_info id="Commit" order="1" weight="0.25" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.19353147" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Problems" order="1" />
+      <window_info anchor="bottom" id="Problems View" order="2" weight="0.32999426" />
+      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info anchor="bottom" id="Services" order="4" />
+      <window_info anchor="bottom" id="Python Packages" order="5" weight="0.1" />
+      <window_info anchor="bottom" id="Python Console" order="6" weight="0.3302207" />
+      <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
+      <window_info anchor="right" id="AIAssistant" order="1" weight="0.3302089" />
+      <window_info anchor="right" id="Database" order="2" weight="0.3302089" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.25" />
+      <window_info anchor="right" id="Plots" order="5" weight="0.1" />
+      <unified_weights bottom="0.32999426" left="0.19353147" right="0.3302089" />
+    </layoutV2>
+    <recentWindows>
+      <value>Project</value>
+      <value>Structure</value>
+      <value>Problems View</value>
+      <value>Python Console</value>
+      <value>Database</value>
+      <value>AIAssistant</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1122" y="539" width="636" height="688" key="FileChooserDialogImpl.ideScale=150" timestamp="1715117571676">
+      <screen x="0" y="0" width="2880" height="1800" />
+    </state>
+    <state x="1122" y="539" width="636" height="688" key="FileChooserDialogImpl.ideScale=150/0.0.2880.1800@0.0.2880.1800" timestamp="1715117571676" />
+    <state x="445" y="517" key="SettingsEditor.ideScale=150" timestamp="1714533644156">
+      <screen x="0" y="0" width="2880" height="1800" />
+    </state>
+    <state x="445" y="517" key="SettingsEditor.ideScale=150/0.0.2880.1800@0.0.2880.1800" timestamp="1714533644156" />
+    <state x="933" y="302" width="1045" height="1520" key="search.everywhere.popup.ideScale=150" timestamp="1714615997932">
+      <screen x="0" y="0" width="2880" height="1800" />
+    </state>
+    <state x="933" y="302" width="1045" height="1520" key="search.everywhere.popup.ideScale=150/0.0.2880.1800@0.0.2880.1800" timestamp="1714615997932" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/Chinese/daxuezhangju.tex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="170" column="10" selection-start-line="170" selection-end-line="170" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1460">
+          <caret line="212" column="16" selection-start-line="212" selection-start-column="16" selection-end-line="212" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Chinese/zijunbiehou.tex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="978">
+          <caret line="438" selection-start-line="438" selection-end-line="438" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Chinese/zhvt-classic.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="98" column="53" selection-start-line="98" selection-start-column="37" selection-end-line="98" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.venv/pyvenv.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

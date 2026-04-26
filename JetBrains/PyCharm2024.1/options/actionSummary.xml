@@ -1,0 +1,127 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$Paste">
+      <i c="3" l="1714621511622" />
+    </e>
+    <e n="$SelectAll">
+      <i c="1" l="1714517825652" />
+    </e>
+    <e n="$Undo">
+      <i c="13" l="1715120897456" />
+    </e>
+    <e n="About">
+      <i c="1" l="1772492854200" />
+    </e>
+    <e n="CWMHostShowPopupAction">
+      <i c="1" l="1772492838939" />
+    </e>
+    <e n="CollapseAll">
+      <i c="1" l="1714526703473" />
+    </e>
+    <e n="ConfigureEditorTabs">
+      <i c="1" l="1714533598516" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="470" l="1715121023894" />
+    </e>
+    <e n="EditorChooseLookupItem">
+      <i c="10" l="1715121005896" />
+    </e>
+    <e n="EditorChooseLookupItemReplace">
+      <i c="5" l="1714921348915" />
+    </e>
+    <e n="EditorCopy">
+      <i c="114" l="1715120918038" />
+    </e>
+    <e n="EditorCut">
+      <i c="14" l="1715120461035" />
+    </e>
+    <e n="EditorDown">
+      <i c="112" l="1715121022408" />
+    </e>
+    <e n="EditorDownWithSelection">
+      <i c="3" l="1714524041081" />
+    </e>
+    <e n="EditorEnter">
+      <i c="235" l="1715121031904" />
+    </e>
+    <e n="EditorLeft">
+      <i c="407" l="1715121021814" />
+    </e>
+    <e n="EditorPaste">
+      <i c="303" l="1715121022714" />
+    </e>
+    <e n="EditorRight">
+      <i c="880" l="1715121020483" />
+    </e>
+    <e n="EditorRightWithSelection">
+      <i c="14" l="1715115112874" />
+    </e>
+    <e n="EditorTab">
+      <i c="4" l="1714917582373" />
+    </e>
+    <e n="EditorTabsEntryPoint">
+      <i c="2" l="1714918415806" />
+    </e>
+    <e n="EditorUp">
+      <i c="90" l="1715114944399" />
+    </e>
+    <e n="Exit">
+      <i c="7" l="1772492982707" />
+    </e>
+    <e n="ExpandAll">
+      <i c="3" l="1714526700021" />
+    </e>
+    <e n="Find">
+      <i c="5" l="1715113983198" />
+    </e>
+    <e n="GotoDeclaration">
+      <i c="3" l="1715118782284" />
+    </e>
+    <e n="NewFile">
+      <i c="1" l="1714517784410" />
+    </e>
+    <e n="OpenFile">
+      <i c="13" l="1715117569176" />
+    </e>
+    <e n="RedesignedRunConfigurationSelector">
+      <i c="1" l="1714517818112" />
+    </e>
+    <e n="SaveAll">
+      <i c="114" l="1715121034390" />
+    </e>
+    <e n="SearchEverywhere">
+      <i c="4" l="1714615994643" />
+    </e>
+    <e n="SelectInProjectView">
+      <i c="2" l="1714526702451" />
+    </e>
+    <e n="SettingsEntryPoint">
+      <i c="1" l="1714517929424" />
+    </e>
+    <e n="ShowSettings">
+      <i c="1" l="1714517933110" />
+    </e>
+    <e n="com.intellij.find.editorHeaderActions.NextOccurrenceAction">
+      <i c="9" l="1715113992544" />
+    </e>
+    <e n="com.intellij.openapi.editor.impl.EditorMarkupModelImpl$TrafficLightAction">
+      <i c="2" l="1714918399130" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="12" l="1715121178332" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.SquareAnActionButton">
+      <i c="22" l="1772492825606" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.customFrameDecorations.header.toolbar.MainMenuButton$ShowMenuAction">
+      <i c="24" l="1772492980662" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.welcomeScreen.ActionGroupPanelWrapper$6">
+      <i c="1" l="1714517635079" />
+    </e>
+    <e n="com.intellij.ui.dsl.builder.components.SegmentedButtonAction">
+      <i c="3" l="1714517470915" />
+    </e>
+  </component>
+</application>

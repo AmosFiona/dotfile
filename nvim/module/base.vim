@@ -1,42 +1,45 @@
 " ============================================================================================
 " === neovim -base 配置
 " ============================================================================================
+
 let g:python_host_prog='/usr/bin/python2'
 let g:python3_host_prog='/usr/bin/python3' "for :checkhealth error no pynvim modules, running python3 -m pip -install pynvim
 
-set nocompatible
+set nocompatible  			"启用插件
 let mapleader = "\<space>"
 inoremap jk <Esc>
 
-syntax on
-set number							"设定行号
+syntax on           "语法高亮
+set number			"设定行号
 set relativenumber
 
-set mouse=							"close cursor
+set mouse=			"close cursor
 set listchars=tab:\|\ ,trail:▫		"setting space display as ▫
+set list
+set tabstop=4				"设置tab制表符4
+set shiftwidth=2    		"设定制表符宽,while autoindent
 
-set tabstop=2						"设置tab制表符4
-set shiftwidth=2    				"设定制表符宽,while autoindent
-
-set ignorecase						"搜索忽略大小写"
-set smartcase						"智能搜索"
-set scrolloff=5						"顶部底部预留5行"
-set encoding=utf-8
-set cursorline						"设置高亮行
+set ignorecase				"搜索忽略大小写"
+set smartcase				"智能搜索"
+set scrolloff=5				"顶部底部预留5行"
+set cursorline				"设置高亮行
 hi Cursorline cterm=NONE ctermbg=241 ctermfg=NONE guibg=NONE guifg=NONE
 set autoindent
 set ruler
+"設定nvim不使用自己的背景
+set termguicolors
+set background=dark
+"colorscheme	default  "必須要用默認主題
+hi Normal ctermbg=NONE guibg=NONE
 
-set wildmenu
+
+set wildmenu           "让NVIM命令可以用Tab补全
 set showcmd
 
-
-
-
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2313,cp936
-set termencoding=utf-8
+"set termencoding=utf-8
 set encoding=utf-8
-let &termencoding=&encoding
+"let &termencoding=&encoding
 
 " 打开文件时光标返回上次离开的位置
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -44,7 +47,8 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " 自动移除末尾空白
 autocmd BufWritePre * :%s/\s\+$//e
 
-
+" close swap files  when closing files
+set bufhidden=wipe
 " ============================================================================================
 " === neovim -CompilerFuncions 配置
 " ============================================================================================
@@ -176,6 +180,11 @@ endfunc
 " 打开nvim时自动重新激活配置
 autocmd VimEnter * source $MYVIMRC
 
+
+setlocal	spell
+set spelllang=en_gb
+"Control + L 检查[s位置错误并选择1z(第一个选项)替换，然后跳转到`z]进行替换
+inoremap <C-l> <c-g>u<ESC>[s1z=`]a<c-g>u
 " 退出文件后，依然保存修改记录
 " silent !mkdir -p $HOME/.config/nvimdata/tmp/backup
 " silent !mkdir -p $HOME/.config/nvimdata/tmp/undo
@@ -189,3 +198,10 @@ autocmd VimEnter * source $MYVIMRC
 " 让配置变更立即生效
 " autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
+"augroup	ZATHURA_SYNC
+"  autocmd!
+"  autocmd BufReadPost *.tex call setpos('.', [0, str2num(get(g:, 'zathura_line',1)),1,0])
+"augroup END
+"
+set laststatus=2
+let g:airlne_powerline_fonts =1

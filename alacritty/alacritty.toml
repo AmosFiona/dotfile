@@ -1,0 +1,126 @@
+# ==============================================
+# Alacritty 0.16.1 稳定版 完整配置文件
+# 官方原版结构 + 中文注释
+# 适配 NVIDIA 单显卡/强制独显环境
+# ==============================================
+
+# --------------------------
+# 1. 环境变量（你的 NVIDIA 关键配置）
+# --------------------------
+[env]
+# 一定为0，单显卡
+#__NV_PRIME_RENDER_OFFLOAD = "0"
+#__GLX_VENDOR_LIBRARY_NAME = "nvidia"
+TERM= "xterm-256color"
+WINDOWING="x11"
+# --------------------------
+# 2. 窗口设置
+# --------------------------
+[window]
+title = "Alacritty"
+decorations = "full"          # 窗口边框：full / none / transparent
+startup_mode = "Windowed"     # 启动模式：Windowed / Maximized / Fullscreen
+opacity = 0.75                # 透明度 0.0~1.0
+#dimensions = { columns = 100, lines = 32 }
+#position = { x = 0, y = 0 }
+#resizable = true
+#pipline_enabled = false       # NVIDIA 建议关闭
+#backend = "X11"
+#decorations	 = "none"
+#[window.background]#
+#image = "/home/fiona/Pictures/Wallpaper/0014.jpg"
+#opacity= 0.15
+#resize= "true"
+## --------------------------
+## 3. 字体
+## --------------------------
+[font]
+size = 10
+#[font.bold]
+#family = "Source Code Pro"
+#style = "Bold"
+[font.normal]
+family = "JetBrainsMono Nerd Font Mono "
+style = "Regular"
+
+# 👇 这是正确的 fallback 字体列表（解决 emoji 不显示）
+#[font.fallback]
+#primary = "JoyPixels"
+#secondary = "Font Awesome 6 Free"
+#tertiary = "Nerd Fonts Symbols"
+	#
+## --------------------------
+## 5. 终端回滚/历史行数
+## --------------------------
+[scrolling]
+history = 10000
+multiplier = 3
+#
+## --------------------------
+## 6. 选择/复制
+## --------------------------
+[selection]
+save_to_clipboard = true
+#
+## --------------------------
+## 7. 鼠标
+## --------------------------
+[mouse]
+hide_when_typing = true
+#double_click = { threshold = 300 }
+#triple_click = { threshold = 300 }
+#
+## --------------------------
+## 8. 颜色主题（Catppuccin Mocha）
+## --------------------------
+[colors.primary]
+#background = "#1e1e2e"
+background = "#282a36" # setting st default
+#foreground = "#cdd6f4"
+foreground = "#f8f8f2" # setting st default
+
+#
+#[colors.cursor]
+#text = "#1e1e2e"
+#cursor = "#f5c2e7"
+#
+#[colors.selection]
+#text = "#1e1e2e"
+#background = "#f5c2e7"
+#
+#[colors.normal]
+#black   = "#45475a"
+#red     = "#f38ba8"
+#green   = "#a6e3a1"
+#yellow  = "#f9e2af"
+#blue    = "#89b4fa"
+#magenta = "#f5c2e7"
+#cyan    = "#94e2d5"
+#white   = "#bac2de"
+#
+#[colors.bright]
+#black   = "#585b70"
+#red     = "#f38ba8"
+#green   = "#a6e3a1"
+#yellow  = "#f9e2af"
+#blue    = "#89b4fa"
+#magenta = "#f5c2e7"
+#cyan    = "#94e2d5"
+#white   = "#eff1f5"
+#
+## --------------------------
+## 10. 快捷键
+## --------------------------
+#[key_bindings]
+## 复制
+##{ key = "c", mods = "Control", action = "Copy" }
+## 粘贴
+##{ key = "v", mods = "Control", action = "Paste" }
+## 全屏
+##{ key = "f11", action = "ToggleFullscreen" }
+## 增大字号
+##{ key = "+", mods = "Control", action = "IncreaseFontSize" }
+## 减小字号
+##{ key = "-", mods = "Control", action = "DecreaseFontSize" }
+## 重置字号
+##{ key = "0", mods = "Control", action = "ResetFontSize" }

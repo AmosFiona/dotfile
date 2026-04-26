@@ -1,19 +1,22 @@
-# 开启自定义颜色
-#set recolor true
-# 背景色
-#set recolor-darkcolor "#EAEAEA"
+#基础定义
 
-# 字体色
-#set recolor-lightcolor "\#1F1F1F"
-
-# 粘贴板
+# 选中内容到系统的粘贴板
 set selection-clipboard clipboard
 
 # 以宽度自适应打开
 set adjust-open "width"
 
-# 留空可隐藏底部的statusbar
-set guioptions "cs"
+# 垂直居中页面
+set vertical-center true
+
+# 始终打开第一页，关闭则记住上次位置
+set open-first-page false
+
+# 状态栏显示页码百分比
+set statusbar-page-percent true
+
+# 状态栏路径用~代替HOME
+#set statusbar-home-title "Zathura"
 
 # 只显示文件名，否则现实完整路径
 set window-title-basename true
@@ -24,3 +27,54 @@ set incremental-search true
 # 显示右侧进度条
 #set show-v-scrallbar true
 
+# 界面与外观
+# 留空可隐藏底部的statusbar   set guioptions ""
+set guioptions "cs"
+
+# 字体 支持中文字体
+set font "Noto Sans CJK SC Regular 10"
+
+# 页面缓存大小
+set page-cache-size 10
+# 开启自定义颜色
+#set recolor true
+# 背景色
+#set recolor-darkcolor "#EAEAEA"
+
+# 字体色
+#set recolor-lightcolor "\#1F1F1F"
+
+# syncTeX 反向搜索（配合LaTeX)
+set synctex true
+#set synctex-editor-command "nvim --server LA_TEX --remote-send '<C-\\><C-N>:execute \\\"e %s\\\"<CR>:%l<CR>'"
+#set synctex-editor-command "alacritty -e nvim -c \":%l\" %s"
+#set synctex-editor-command "alacritty -e nvim %s"
+#set synctex-editor-command "alacritty -e nvim %s +%l"
+#set synctex-editor-command "alacritty -e nvim +%l '%s'"
+#set synctex-editor-command "alacritty -e sh -c  'nvim +%l \"%s\"'"
+#set synctex-editor-command "alacritty -e nvim %s -c 'normal %gg'"
+#set synctex-editor-command "/home/fiona/.local/bin/zathura-nvim.sh %s %l"
+#不传#Line %又识别成命令set synctex-editor-command "/home/fiona/.local/bin/zathura-nvim.sh %s #Line"
+#set synctex-editor-command "/home/fiona/.local/bin/zathura-nvim.sh %s #Line"
+# need pacman -S synctex/libsynctex
+#set synctex-editor-command "nvim --server /tmp/nvim-sync.pipe --remote-send \"<ESC>%LG<CR>\""
+#set synctex-editor-command "/home/fiona/.local/bin/zathura-nvim.sh %f %g"
+set synctex-editor-command "/home/fiona/.local/bin/zathura-nvim.sh %F"
+
+#set synctex-editor-command "nvim --server /tmp/nvim-sync.pipe --remote-send \"<ESC>:call cursor(%l,1)<CR>\""
+#set synctex-editor-command "nvim --server /tmp/nvim-sync.pipe --remote %s +%l"
+
+#set synctex-editor-command "/home/fiona/.local/bin/zathura-nvim.sh \'%l\'"
+#set synctex-editor-command "/home/fiona/.local/bin/zathura-nvim.sh #Line"
+#set synctex-editor-command "alacritty -e nvim %s -c 'normal %gg'"
+#set synctex-editor-command "nvr -s /tmp/nvim.Zathura -c %l %s"
+#set synctex-editor-command "nvim --server ~/.cache/nvim/server.pipe --remote-send '<C-\><C-N>:e %s<CR>:%l<CR>'"
+#set synctex-editor-command "nvim --server /tmp/nvim-sync.pipe --remote +%l %s"
+#set synctex-editor-command "nvim --server /tmp/nvim-sync.pipe --remote %s:%l"
+#set synctex-editor-command "nvim --server /tmp/nvim-sync.pipe --remote-send '<esc>:%l<cr>:e %s<cr>'"
+#set synctex-editor-command "nvim --server /tmp/nvim-sync.pipe --remote-send \"<ESC>:execute %l<CR>:edit %s<CR>:edit %:p:r.tex<CR>\""
+#set synctex-editor-command "nvim --server /tmp/nvim-sync.pipe --remote-send \"<ESC>:execute %l<CR>:edit %s<CR>:edit %:p:r.tex<CR>\""
+#set synctex-editor-command "nvim --server /tmp/nvim-sync.pipe --remote-send \"<ESC>:execute %l<CR>:edit %s<CR>:%l<CR>\""
+#set synctex-editor-command "nvim --server ~/.cache/nvim/server.pipe --remote-send \"<ESC>:exe '%l' <CR>:e %s <CR>\""
+#set synctex-editor-command "nvim --server /tmp/nvim-sync.pipe --remote-send \"<C-\\><C-N>:e %s<CR>:%l<CR>\""
+set synctex-edit-modifier "ctrl"
