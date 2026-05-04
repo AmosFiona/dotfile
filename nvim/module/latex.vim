@@ -1,4 +1,16 @@
 " Latex 快捷键
+" For Studies/Guwen... Select -> spaceXX to surround by env.
+xnoremap <leader>eq c\begin{env}<CR><C-r>"<CR>\end{env}<CR>
+
+
+"for Learning English
+xnoremap <leader>ar c\begin{articleNote}<CR><C-r>"<CR>\end{articleNote}<CR>
+xnoremap <leader>ph c\phonetic{<C-r>"}{/
+xnoremap <leader>tr c\translate{<C-r>"}
+
+" for mybook.cls
+xnoremap <leader>na c\name{<C-r>"}
+
 
 "lervag/vimtex
 filetype plugin indent on

@@ -149,9 +149,8 @@ set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P\ %{coc#status()}%{get(b:,'coc_c
 " popup
 nmap <Leader>tw <Plug>(coc-translator-p)
 vmap <Leader>tw <Plug>(coc-translator-pv)
-" replace
-nmap <Leader>tr <Plug>(coc-translator-r)
-nmap <Leader>tr <Plug>(coc-translator-rv)
+" replace for latex my learnings.cls <\translate> confilct
+" nmap <Leader>tr <Plug>(coc-translator-r)
+" nmap <Leader>tr <Plug>(coc-translator-rv)
 
 
-xnoremap <leader>w c\begin{env}<CR><C-r>"<CR>\end{env}<CR>
