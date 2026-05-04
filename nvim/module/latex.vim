@@ -75,7 +75,6 @@ let g:vimtex_quickfix_mode = 2
 "编译过程中忽略警告信息
 "let g:vimtex_quickfix_open_on_warning=0
 
-
 "F5 编译文档 打开刷新 zathura
 "autocmd	FileType tex nnoremap <buffer> <F5> :execute '!xelatex -shell-escape -8bit -synctex=1 % && zathura %:r.pdf &'<CR><CR>
 autocmd	FileType tex nnoremap <buffer> <F5> :execute '!xelatex -shell-escape -8bit -synctex=1 % && okular %:r.pdf &'<CR><CR>

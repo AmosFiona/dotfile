@@ -1,4 +1,4 @@
-snippet exercise "习题环境" bi
+snippet exercise "习题环境" b
 \begin{Exercise}
 	\begin{exercises}
 		\item $1
@@ -8,4 +8,15 @@ snippet exercise "习题环境" bi
 	\end{exercises}
 \end{Exercise}
 $0
+endsnippet
+
+snippet it "Wrap selection with latex environment"
+\begin{${1:envname}}
+${0:text}
+\end{${1}}
+endsnippet
+snippet iw "Wrap selection with latex environment" b
+\begin{${1:envname}}
+${0:${SELECTION}}
+\end{${1}}
 endsnippet

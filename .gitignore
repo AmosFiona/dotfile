@@ -1,17 +1,19 @@
+# ignore whole files
 chromium/
 clash/
 coc/
 dconf/
-dwm-bar/
 fcitx/
 fcitx5/
 go/
 gkt-3.0/
-lazygit/
 ibus/
 procps/
 nvim/plugged/
 yarn/
+GIMP/
 yay/
 oku*
 klan*
+QtProject.conf
+kde*

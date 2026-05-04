@@ -152,3 +152,6 @@ vmap <Leader>tw <Plug>(coc-translator-pv)
 " replace
 nmap <Leader>tr <Plug>(coc-translator-r)
 nmap <Leader>tr <Plug>(coc-translator-rv)
+
+
+xnoremap <leader>w c\begin{env}<CR><C-r>"<CR>\end{env}<CR>

@@ -1,0 +1,13 @@
+lastupdatecheck: 0
+recentrepos:
+    - /home/fiona/.config
+    - /home/fiona/Study/Latex_testing
+    - /home/fiona/.config/nvim/plugged/coc.nvim
+    - /home/fiona/Documents
+startuppopupversion: 5
+didshowhunkstaginghint: false
+lastversion: 0.61.1
+customcommandshistory:
+    - :q
+hidecommandlog: false
+githubPullRequests: {}
